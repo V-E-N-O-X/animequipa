@@ -1,76 +1,80 @@
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 5px; /* Set the width of the scrollbar */
+  width: 8px;
+  background: transparent;
 }
+
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent; /* Make scrollbar track transparent */
+  background: transparent;
 }
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; /* Color of the scrollbar handle */
-  border-radius: 0.2rem; /* Roundness of the scrollbar handle */
+  background: #4a4a4a;
+  border-radius: 4px;
 }
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Color of the scrollbar handle on hover */
+  background: #555;
 }
 
 /* CSS Variables */
 
 /* Base and Light Mode Specific Colors */
 :root {
-  --global-primary-bg: #f5f5f5;
-  --global-primary-bg-tr: rgba(245, 245, 245, 0.97);
-  --global-ad-bg: #e0e0e0;
-  --global-input-div: #e0e0e0;
-  --global-input-border: rgba(8, 8, 8, 0.1);
-  --global-text: #333333;
-  --global-card-bg: #ffffff;
-  --global-card-title-bg: #e8e8e8;
-  --global-card-shadow: rgba(0, 0, 0, 0.2);
+  --global-primary-bg: #101010;
+  --global-primary-bg-tr: rgba(16, 16, 16, 0.97);
+  --global-ad-bg: #0d0d0d;
+  --global-input-div: #1f1f1f;
+  --global-input-border: rgba(255, 255, 255, 0.1);
+  --global-text: #e0e0e0;
+  --global-card-bg: #1f1f1f;
+  --global-card-title-bg: #292929;
+  --global-card-shadow: rgba(0, 0, 0, 0.3);
   --global-card-button-shadow: rgba(0, 0, 0, 0.6);
   --global-primary-skeleton: rgba(165, 165, 165, 0.1);
   --global-secondary-skeleton: rgba(165, 165, 165, 0.3);
-  --global-button-bg: #e0e0e0;
-  --global-button-hover-bg: #c8c8c8;
-  --global-button-text: #333333;
+  --global-button-bg: #2b2b2b;
+  --global-button-hover-bg: #333;
+  --global-button-text: #e0e0e0;
   --global-button-shadow: rgba(255, 255, 255, 0.5);
-  --global-popup-shadow: rgba(255, 255, 255, 0.5);
-  --global-genre-button-bg: #d4d4d4;
+  --global-popup-shadow: rgba(0, 0, 0, 0.5);
+  --global-genre-button-bg: #2f2f2f;
   --global-shadow: rgba(0, 0, 0, 0.1);
   --global-filter: rgba(0, 0, 0, 0.6);
-  --global-secondary-bg: #e0e0e0;
-  --global-tertiary-bg: #eaeaea;
+  --global-secondary-bg: #1f1f1f;
+  --global-tertiary-bg: #2a2a2a;
   --global-border-radius: 0.3rem;
-  --primary-accent: #8080cf;
-  --primary-accent-bg: #595991;
+  --primary-accent: #f44336;
+  --primary-accent-bg: #ffccbc;
   --logo-text-transparent: url("/src/assets/miruro-text-transparent-black.webp");
   --logo-transparent: url("/src/assets/miruro-transparent-black.webp");
 }
 
 /* Dark Mode Specific Colors */
 :root.dark-mode {
-  --global-primary-bg: #080808;
-  --global-primary-bg-tr: rgba(8, 8, 8, 0.97);
-  --global-ad-bg: #141414;
-  --global-input-div: #141414;
-  --global-input-border: rgba(245, 245, 245, 0.1);
-  --global-text: #e8e8e8;
-  --global-card-bg: #181818;
+  --global-primary-bg: #0d0d0d;
+  --global-primary-bg-tr: rgba(13, 13, 13, 0.97);
+  --global-ad-bg: #1a1a1a;
+  --global-input-div: #1a1a1a;
+  --global-input-border: rgba(255, 255, 255, 0.1);
+  --global-text: #e0e0e0;
+  --global-card-bg: #1f1f1f;
   --global-card-shadow: rgba(0, 0, 0, 0.6);
   --global-card-button-shadow: rgba(255, 255, 255, 0.6);
   --global-primary-skeleton: rgba(85, 85, 85, 0.1);
   --global-secondary-skeleton: rgba(85, 85, 85, 0.3);
-  --global-button-bg: #202020;
-  --global-button-hover-bg: #292929;
+  --global-button-bg: #2b2b2b;
+  --global-button-hover-bg: #333;
   --global-button-shadow: rgba(0, 0, 0, 0.6);
   --global-button-text: #ebebeb;
   --global-popup-shadow: rgba(0, 0, 0, 0.3);
-  --global-genre-button-bg: #222222;
+  --global-genre-button-bg: #2f2f2f;
   --global-shadow: rgba(255, 255, 255, 0.08);
-  --global-secondary-bg: #141414;
-  --global-tertiary-bg: #222222;
+  --global-secondary-bg: #1f1f1f;
+  --global-tertiary-bg: #2a2a2a;
   --global-card-title-bg: #151515;
   --logo-text-transparent: url("/src/assets/miruro-text-transparent-white.webp");
   --logo-transparent: url("/src/assets/miruro-transparent-white.webp");
@@ -78,24 +82,21 @@
 
 /* Basic app styles */
 body {
-  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-feature-settings: normal;
-  font-variation-settings: normal;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  padding: 3.5rem 1rem 1.5rem 1rem;
-  max-width: 105rem;
-  margin: auto;
+  padding: 0;
   background-color: var(--global-primary-bg);
   color: var(--global-text);
-  transition: 0.1s ease;
+  transition: 0.3s ease;
 }
+
 /* Responsive styles */
 @media (max-width: 1000px) {
   body {
-    padding: 3rem 0.5rem 0.5rem 0.5rem;
+    padding: 0;
   }
 }
+
 /* Selection styles */
 ::selection {
   background-color: var(--primary-accent-bg);
